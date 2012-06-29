@@ -1,15 +1,12 @@
-use Rack::Static,
-  :urls => ["/stylesheets", "/images"],
-  :root => "public"
+require File.dirname(__FILE__) + '/vendor/gems/environment'
+Bundler.require_env
+require 'rack/contrib'
+require 'rack-rewrite'
 
-run lambda { |env|
-  [
-    200,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => 'public, max-age=86400'
-    },
-    File.open('public/index.html', File::RDONLY)
-  ]
-}
+use Rack::StaticCache, :urls => ['/images','/css','/favicon.ico'], :root => "public"
+use Rack::ETag
+use Rack::Rewrite do
+  rewrite '/', '/index.html'
+end
+run Rack::Directory.new('public')
 
