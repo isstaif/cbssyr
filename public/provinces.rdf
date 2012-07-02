@@ -5,6 +5,7 @@
   xmlns:qb="http://purl.org/linked-data/cube#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dbpprop="http://dbpedia.org/property/"
 >
   <rdf:Description rdf:about="provinces.rdf#Province">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
@@ -13,71 +14,85 @@
   <rdf:Description rdf:about="provinces.rdf#Damascus">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Damascus_Governorate" />
+    <dbpprop:isoCode>SY-DI</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Aleppo">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Aleppo_Governorate" />
+    <dbpprop:isoCode>SY-HL</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Al-Hasakeh">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Al-Hasakah_Governorate" />
+    <dbpprop:isoCode>SY-HA</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Lattakia">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Latakia_Governorate" />
+    <dbpprop:isoCode>SY-LA</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Al-Quneitra">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Quneitra_Governorate" />
+    <dbpprop:isoCode>SY-QU</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Al-Rakka">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Ar-Raqqah_Governorate" />
+    <dbpprop:isoCode>SY-RA</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Al-Sweida">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/As-Suwayda_Governorate" />
+    <dbpprop:isoCode>SY-SU</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Dir-ez-Zor">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Deir_ez-Zor_Governorate" />
+    <dbpprop:isoCode>SY-DY</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Hama">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Hama_Governorate" />
+    <dbpprop:isoCode>SY-HM</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Homs">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Homs_Governorate" />
+    <dbpprop:isoCode>SY-HI</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Idleb">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Idlib_Governorate" />
+    <dbpprop:isoCode>SY-ID</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Rural_Damascus">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Rif_Dimashq_Governorate" />
+    <dbpprop:isoCode>SY-RD</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Tartous">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Tartus_Governorate" />
+    <dbpprop:isoCode>SY-TA</dbpprop:isoCode>
   </rdf:Description>
 
   <rdf:Description rdf:about="provinces.rdf#Daraa">
     <rdf:type rdf:resource="provinces.rdf#Province" />
     <owl:sameAs resource="http://dbpedia.org/resource/Daraa_Governorate" />
+    <dbpprop:isoCode>SY-DR</dbpprop:isoCode>
   </rdf:Description>
 
 
