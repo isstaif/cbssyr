@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type="text/javascript" src="http://www.thefigtrees.net/lee/sw/sparql.js"></script>
+    <script type='text/javascript'>
+     google.load('visualization', '1', {'packages': ['geochart']});
+     google.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+        var sparqler = new SPARQL.Service("http://localhost:3030/sparql");
+        sparqler.setMethod('GET');
+
+       	sparqler.addDefaultGraph("http://cbssyr.herokuapp.com/2010/acoustic-impedance"); // inherited by all (future) queries
+
+       	sparqler.addNamedGraph("http://cbssyr.herokuapp.com/provinces.rdf");
+       	sparqler.addNamedGraph("http://cbssyr.herokuapp.com/cbssyr");
+
+     		sparqler.setPrefix("qb", "http://purl.org/linked-data/cube#");
+     		sparqler.setPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+     		sparqler.setPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
+     		sparqler.setPrefix("provinces", "http://cbssyr.herokuapp.com/provinces.rdf#");
+     		sparqler.setPrefix("owl", "http://www.w3.org/2002/07/owl#");
+     		sparqler.setPrefix("cbssyr", "http://cbssyr.herokuapp.com/cbssyr#");
+     		sparqler.setPrefix("dbpprop", "http://dbpedia.org/property/");
+
+
+     		var query = sparqler.createQuery();
+       	query.query("SELECT ?value ?province ?iso \
+            WHERE {\
+            ?a a qb:Observation . \
+            ?a cbssyr:acoustic-impedance ?value .\
+            ?a cbssyr:province ?province . \
+            GRAPH <http://cbssyr.herokuapp.com/provinces.rdf> { \
+            ?province dbpprop:isoCode ?iso \
+            } \
+            }",
+		      {
+
+		      failure: function(){console.debug("Failure");},
+
+	        success: function(json) {
+	          console.debug(json);
+
+	          querydata = [];
+	          for (var x in json.results.bindings) {
+	            console.debug(json.results.bindings[x].iso.value, json.results.bindings[x].value.value);
+	            querydata.push([json.results.bindings[x].iso.value, parseInt(json.results.bindings[x].value.value)]);
+
+
+            }
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'City');
+            data.addColumn('number', 'Acoustic Impedance 2010');
+            data.addRows(querydata);
+
+            var options = {
+              region: 'SY',
+              resolution: 'provinces',
+              colorAxis: {colors: ['yellow', 'green']}
+            };
+
+
+
+            var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+
+          }
+	        }
+	      );
+
+
+    };
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
+
