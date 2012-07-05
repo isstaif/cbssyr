@@ -10,7 +10,7 @@
         var sparqler = new SPARQL.Service("http://sparql.org/sparql");
         sparqler.setMethod('GET');
 
-       	sparqler.addDefaultGraph("http://cbssyr.herokuapp.com/2010/acoustic-impedance"); // inherited by all (future) queries
+       	sparqler.addDefaultGraph("http://cbssyr.herokuapp.com/acoustic-impedance"); // inherited by all (future) queries
 
        	sparqler.addNamedGraph("http://cbssyr.herokuapp.com/provinces.rdf");
        	sparqler.addNamedGraph("http://cbssyr.herokuapp.com/cbssyr");
