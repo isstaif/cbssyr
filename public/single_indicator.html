@@ -7,10 +7,10 @@
      google.setOnLoadCallback(drawMarkersMap);
 
       function drawMarkersMap() {
-        var sparqler = new SPARQL.Service("http://sparql.org/sparql");
+        var sparqler = new SPARQL.Service("http://localhost:3030/sparql");
         sparqler.setMethod('GET');
 
-       	sparqler.addDefaultGraph("http://cbssyr.herokuapp.com/acoustic-impedance"); // inherited by all (future) queries
+       	sparqler.addDefaultGraph("http://cbssyr.herokuapp.com/2010/acoustic-impedance"); // inherited by all (future) queries
 
        	sparqler.addNamedGraph("http://cbssyr.herokuapp.com/provinces.rdf");
        	sparqler.addNamedGraph("http://cbssyr.herokuapp.com/cbssyr");
@@ -25,11 +25,14 @@
 
 
      		var query = sparqler.createQuery();
-       	query.query("SELECT ?value ?province ?iso \
+       	query.query("SELECT ?value ?province ?iso ?name \
             WHERE {\
             ?a a qb:Observation . \
             ?a cbssyr:acoustic-impedance ?value .\
             ?a cbssyr:province ?province . \
+            GRAPH <http://cbssyr.herokuapp.com/cbssyr> { \
+              cbssyr:acoustic-impedance rdfs:label ?name . \
+            } \
             GRAPH <http://cbssyr.herokuapp.com/provinces.rdf> { \
             ?province dbpprop:isoCode ?iso \
             } \
@@ -39,32 +42,33 @@
 		      failure: function(){console.debug("Failure");},
 
 	        success: function(json) {
-	          console.debug(json);
+
+	          indicator_name = "";
 
 	          querydata = [];
 	          for (var x in json.results.bindings) {
-	            console.debug(json.results.bindings[x].iso.value, json.results.bindings[x].value.value);
 	            querydata.push([json.results.bindings[x].iso.value, parseInt(json.results.bindings[x].value.value)]);
-
-
+	            indicator_name = json.results.bindings[x].name.value;
             }
 
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'City');
-            data.addColumn('number', 'Acoustic Impedance 2010');
-            data.addRows(querydata);
+            function draw(values){
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'City');
+              data.addColumn('number', indicator_name);
+              data.addRows(values);
 
-            var options = {
-              region: 'SY',
-              resolution: 'provinces',
-              colorAxis: {colors: ['yellow', 'green']}
-            };
+              var options = {
+                region: 'SY',
+                resolution: 'provinces',
+                colorAxis: {colors: ['yellow', 'green']}
+              };
+
+              var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+              chart.draw(data, options);
+            }
 
 
-
-            var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-
+            draw(querydata);
 
           }
 	        }
