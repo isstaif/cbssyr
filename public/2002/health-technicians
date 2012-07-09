@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:qb="http://purl.org/linked-data/cube#"
+  xmlns:provinces="http://cbssyr.herokuapp.com/provinces.rdf#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:cbssyr="http://cbssyr.herokuapp.com/cbssyr#"
+>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians">
+  <rdf:type rdf:resource="http://purl.org/linked-data/cube#DataSet" />
+  <qb:structure rdf:resource="http://stats.gov.sy/dsd/health-technicians"/>
+  <rdfs:label>health technicians in year 2002</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs0">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Damascus" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>2217</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS0</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs1">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Aleppo" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>669</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS1</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs2">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Rural_Damascus" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>1020</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS2</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs3">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Homs" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>2401</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS3</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs4">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Hama" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>1864</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS4</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs5">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Lattakia" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>545</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS5</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs6">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Idleb" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>1508</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS6</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs7">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Al-Hasakeh" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>261</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS7</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs8">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Dir-ez-Zor" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>518</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS8</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs9">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Tartous" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>248</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS9</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs10">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Al-Rakka" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>568</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS10</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs11">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Daraa" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>941</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS11</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs12">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Al-Sweida" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>1025</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS12</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://stats.gov.sy/2002/health-technicians.rdf#obs13">
+	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
+	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Al-Quneitra" />
+	<cbssyr:year>2002</cbssyr:year>
+	<cbssyr:health-technicians>272</cbssyr:health-technicians>
+	<qb:dataset rdf:resource="http://stats.gov.sy/2002/health-technicians.rdf#dataset"/>
+	<rdfs:label>OBS13</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>
