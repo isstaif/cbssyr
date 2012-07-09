@@ -10,7 +10,7 @@
 <rdf:Description rdf:about="http://stats.gov.sy/2010/acoustic-impedance">
   <rdf:type rdf:resource="http://purl.org/linked-data/cube#DataSet" />
   <qb:structure rdf:resource="http://stats.gov.sy/dsd/acoustic-impedance"/>
-  <rdfs:label>acoustic-impedance in year 2010</rdfs:label>
+  <rdfs:label>acoustic impedance in year 2010</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://stats.gov.sy/2010/acoustic-impedance.rdf#obs0">
@@ -89,7 +89,7 @@
 	<rdf:type rdf:resource="http://purl.org/linked-data/cube#Observation" />
 	<cbssyr:province rdf:resource="http://cbssyr.herokuapp.com/provinces.rdf#Dir-ez-Zor" />
 	<cbssyr:year>2010</cbssyr:year>
-	<cbssyr:acoustic-impedance>18</cbssyr:acoustic-impedance>
+	<cbssyr:acoustic-impedance>0</cbssyr:acoustic-impedance>
 	<qb:dataset rdf:resource="http://stats.gov.sy/2010/acoustic-impedance.rdf#dataset"/>
 	<rdfs:label>OBS8</rdfs:label>
 </rdf:Description>
